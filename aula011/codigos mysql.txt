@@ -1,0 +1,17 @@
+CREATE TABLE tb_produtos (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	produto VARCHAR(255),
+	preco DECIMAL(10, 2),
+	vendidos INT
+)
+
+
+
+
+LOAD DATA INFILE 'C:\\Users\\victor.peres\\Documents\\BigData\\Algoritmo\\Aula_011\\aula011\\base1.csv'
+INTO TABLE tb_produtos
+FIELDS TERMINATED BY ';'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(produto, preco, vendidos)
+
